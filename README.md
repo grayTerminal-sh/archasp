@@ -1,4 +1,4 @@
-# full-config
+# archasp – Arch Sway Pentest
 
 ![Screenshot](./.assets/screen.jpg)
 
@@ -8,7 +8,8 @@ Personal Arch Linux configuration focused on:
 - Terminal-first workflow with Sway, Neovim, Kitty
 - Catppuccin Mocha themed UI.  
 
-The repository is managed as a bare Git repo (`$HOME/.cfg`) with `$HOME` as the working tree.
+==Goal== : 
+all reproducible from a single install script and a GNU Stow‑managed dotfiles repo.
 
 ---
 
@@ -324,19 +325,52 @@ Additional directories complete the environment:
 
 ---
 
-## Installation (bare repo workflow)
-
-This repo is intended to be used as a bare repo with `$HOME` as the working tree:
+## Installation (on existing system)
 
 ```bash
-git clone --bare git@github.com:grayTerminal-sh/full-config.git "$HOME/.cfg"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-config checkout
-config config --local status.showUntrackedFiles no
+sudo pacman -S stow git base-devel
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
-Add the alias to your shell config to use `config` as a dedicated Git command for this setup.
+```bash
+yay -S catppuccin-cursors-mocha catppuccin-gtk-theme-mocha && git clone https://github.com/grayTerminal-sh/archasp.git
+```
+
+```bash
+mkdir ~/.dotfiles
+```
+
+```bash
+mv ~/archasp/* ~/.dotfiles
+rm -r ~/archasp
+```
+
+```bash
+cd ~/.dotfiles
+```
+
+```bash
+stow \
+    bat btop calcure cliphist\ 
+    eza fastfetch gtk-3.0\ 
+    gtk-4.0 icons kitty nvim\ 
+    qt5ct qt6ct starship sway\ 
+    swaylock swaync themes wofi\ 
+    yazi zsh
+```
+
+```bash
+yay -S\ 
+    bat btop calcure cliphist\
+    eza fastfetch gtk-3.0\
+    gtk-4.0 icons kitty nvim\
+    qt5ct qt6ct starship\
+    swayfx swaylock swaync\
+    themes wofi yazi zsh
+
+```
 
 ---
-
-If you want, I can now trim or expand any specific section (for example Neovim or Sway) to better match the audience you’re targeting.
