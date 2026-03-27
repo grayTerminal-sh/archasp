@@ -426,7 +426,7 @@ yay -S \
 
 ```shell
 sudo mkdir -p /etc/greetd/background &&\
-sudo cp ~/Pictures/Wallpapers/sway.png /etc/greetd/background
+sudo cp ~/.dotfiles/Wallpapers/.wallpapers/sway.png /etc/greetd/background
 ```
 ---
 
