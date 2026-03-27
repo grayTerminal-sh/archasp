@@ -1,4 +1,4 @@
-# archasp – Arch Sway Pentest
+<h1 style="color:#cba6f7"> ArchASP – Arch Sway Pentest</h1>
 
 <p align="center">
 <picture>
