@@ -1,6 +1,6 @@
 # ArchASP – Arch Sway Pentest
-<!-- <p align="center"> -->
-<picture align="center">
+<p align="center">
+<picture>
     <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/screen.jpg width="600" height="400" alt="screenshot">
 </picture>
 
