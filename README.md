@@ -2,7 +2,7 @@
 
 <p align="center">
 <picture>
-    <img source=.assets/screen.jpg width="600" height="400" alt="NPM">
+    <img source=ttps://raw.githubusercontent.com/grayTerminal-sh/main/.assets/screen.jpg width="600" height="400" alt="screenshot">
 </picture>
 
 Personal Arch Linux configuration focused on: 
