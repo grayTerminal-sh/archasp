@@ -39,6 +39,7 @@ format = " $icon {$signal_strength $ssid} "
 [[block]]
 block = "sound"
 step_width = 3
+max_vol = 100
 
 [[block]]
 block = "backlight"

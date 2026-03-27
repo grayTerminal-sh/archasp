@@ -1,6 +1,9 @@
 # archasp – Arch Sway Pentest
 
-![Screenshot](./.assets/screen.jpg)
+<p align="center">
+<picture>
+    <img source=.assets/screen.jpg width="600" height="400" alt="NPM">
+</picture>
 
 Personal Arch Linux configuration focused on: 
 
@@ -10,6 +13,7 @@ Personal Arch Linux configuration focused on:
 
 ==Goal== : 
 all reproducible from a single install script and a GNU Stow‑managed dotfiles repo.
+<p>
 
 ---
 

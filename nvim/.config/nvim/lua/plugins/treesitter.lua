@@ -12,6 +12,7 @@ return {
       "markdown_inline",
       "query",
       "python",
+      "html",
     },
     auto_install = true,
     highlight = {
