@@ -1,0 +1,3 @@
+[submodule "wiki/Wiki"]
+	path = wiki/Wiki
+	url = https://github.com/grayTerminal-sh/from-zero-to-pentester
