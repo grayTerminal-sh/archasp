@@ -31,7 +31,7 @@ The goal is to provide an opinionated but reusable starting point for an Arch/Li
 
 ---
 
-## 󰧹 Required packages
+## Required packages
 
 This setup assumes the following tools are installed (Arch package names):
 
@@ -66,7 +66,7 @@ This setup assumes the following tools are installed (Arch package names):
 
 ---
 
-##  Zsh configuration
+## Zsh configuration
 
 The Zsh configuration (`.zshrc`) is kept intentionally minimal and fast, while providing a modern shell experience.
 
@@ -106,7 +106,7 @@ Main features:
 
 ---
 
-##  Themes: `.themes/Catppuccin-Mocha`
+## Themes: `.themes/Catppuccin-Mocha`
 
 This directory contains the Catppuccin Mocha theme adapted for several environments:
 
@@ -131,7 +131,7 @@ This ensures a consistent Catppuccin Mocha look across desktops, apps and widget
 
 ---
 
-##  Yazi: `.config/yazi`
+## Yazi: `.config/yazi`
 
 <p align="center">
     <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/yazi.jpg width="600" height="400" alt="screenshot">
@@ -153,7 +153,7 @@ Configuration for the Yazi terminal file manager:
 
 ---
 
-## 󰔣 Wofi: `.config/wofi`
+## Wofi: `.config/wofi`
 
 Configuration for Wofi, a Wayland application launcher and cliphist manager:
 
@@ -166,7 +166,7 @@ Configuration for Wofi, a Wayland application launcher and cliphist manager:
 
 ---
 
-##  Starship: `.config/starship.toml`
+## Starship: `.config/starship.toml`
 
 <p align="center">
     <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/starship.jpg width="600" height="400" alt="screenshot">
@@ -178,7 +178,7 @@ It defines the segments, colors and layout of the prompt to integrate visually w
 
 ---
 
-## 󰧨 Sway: `.config/sway`
+## Sway: `.config/sway`
 
 Sway configuration is split into multiple modular files for clarity:
 
@@ -224,7 +224,7 @@ Qt theming configuration using `qt5ct` and `qt6ct`:
 
 ---
 
-## 󰦨 Neovim: `.config/nvim`
+## Neovim: `.config/nvim`
 
 <p align="center">
     <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/nvim.jpg width="600" height="400" alt="screenshot">
@@ -273,7 +273,7 @@ This setup gives a modern, IDE-like Neovim experience with LSP, Treesitter, file
 
 ---
 
-##  Kitty: `.config/kitty`
+## Kitty: `.config/kitty`
 
 Kitty terminal configuration and themes:
 
@@ -340,7 +340,7 @@ Additional directories complete the environment:
 
 ---
 
-##  Installation (on existing system)
+## Installation (on existing system)
 
 ### YAY install
 
@@ -420,7 +420,7 @@ yay -S \
   swayidle greetd greetd-regreet  
 ```
 
-### regreet config
+### Regreet config
 
 ```shell
 sudo mkdir -p /etc/greetd/background &&\
