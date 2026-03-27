@@ -61,7 +61,7 @@ This setup assumes the following tools are installed (Arch package names):
 - [gtk4](https://gitlab.gnome.org/GNOME/gtk/)
 - [catppuccin-gtk-theme-mocha](https://github.com/catppuccin/gtk)
 - [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
-- [greetd](<https://github.com/kennylevinsen/greetd)
+- [greetd](https://github.com/kennylevinsen/greetd)
 - [regreet](https://github.com/rharish101/regreet)
 
 ---
