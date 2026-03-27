@@ -1,4 +1,4 @@
-$${\color{lightgreen}Light # ArchASP – Arch Sway Pentest $$
+$${\color{lightgreen}Light# \space ArchASP \space – \space Arch \space Sway \space Pentest}$$
 
 <!-- <p align="center"> -->
 <picture>
