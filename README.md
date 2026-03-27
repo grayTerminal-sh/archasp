@@ -1,7 +1,6 @@
-$${\color{lightgreen}Light# \space ArchASP \space – \space Arch \space Sway \space Pentest}$$
-
+# ArchASP – Arch Sway Pentest
 <!-- <p align="center"> -->
-<picture>
+<picture align="center">
     <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/screen.jpg width="600" height="400" alt="screenshot">
 </picture>
 
@@ -11,7 +10,7 @@ Personal Arch Linux configuration focused on:
 - Terminal-first workflow with Sway, Neovim, Kitty
 - Catppuccin Mocha themed UI.  
 
-==Goal== : 
+**Goal** : 
 all reproducible from a single install script and a GNU Stow‑managed dotfiles repo.
 <p>
 
