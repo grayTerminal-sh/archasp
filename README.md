@@ -1,6 +1,6 @@
 # ArchASP – Arch Sway Pentest
+
 <p align="center">
-<picture>
     <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/screen.jpg width="600" height="400" alt="screenshot">
 </picture>
 
@@ -16,7 +16,7 @@ all reproducible from a single install script and a GNU Stow‑managed dotfiles 
 
 ---
 
-## Overview
+##  Overview
 
 This repo contains my entire user configuration, including:
 
@@ -31,54 +31,42 @@ The goal is to provide an opinionated but reusable starting point for an Arch/Li
 
 ---
 
-## Required packages
+## 󰧹 Required packages
 
 This setup assumes the following tools are installed (Arch package names):
 
-- swayfx (Wayland tiling window manager)
-- swaylock-effects
-- swayidle
-- wofi (Wayland application launcher)
-- i3status-rust (status bar blocks)
-- kitty (terminal emulator)
-- neovim (text editor)
-- zsh (shell)
-- starship (prompt)
-- fzf (fuzzy finder)
-- fd (fast file search, used by fzf)
-- ripgrep (rg, fast grep)
-- eza (ls replacement)
-- fastfetch (system info on shell startup)
-- yazi (terminal file manager)
-- bat (cat replacement with syntax highlighting)
-- cliphist (Wayland clipboard manager)
-- calcure (terminal calendar and tasks)
-- zoxide (smart cd)
-- pyenv (Python version manager)
-- git (version control)
-- yay or paru (AUR helper, optional but recommended)
-- gtk3
-- gtk4
-- catppuccin-gtk-theme-mocha
-- catppuccin-cursors-mocha
-
-Install on Arch Linux for example:
-
-```bash
-yay -S --needed \
-  swayfx wofi i3status-rust kitty neovim zsh \
-  starship fzf fd ripgrep eza fastfetch yazi bat \
-  cliphist calcure zoxide pyenv git \
-  gtk3 gtk4 catppuccin-gtk-theme-mocha \
-  catppuccin-cursors-mocha swaylock-effects \
-  swayidle 
-```
-
-For AUR-only tools on your system, use your preferred AUR helper (yay, paru, etc.).
+- [swayfx](https://github.com/WillPower3309/swayfx) (Wayland tiling window manager)
+- [swaylock-effects](https://github.com/mortie/swaylock-effects)
+- [swayidle](https://github.com/swaywm/swayidle)
+- [wofi](https://github.com/SimplyCEO/wofi) (Wayland application launcher)
+- [i3status-rust](https://github.com/greshake/i3status-rust?tab=readme-ov-file) (status bar blocks)
+- [kitty](https://github.com/kovidgoyal/kitty) (terminal emulator)
+- [neovim](https://github.com/neovim/neovim) (text editor)
+- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) (shell)
+- [starship](https://github.com/starship/starship) (prompt)
+- [fzf](https://github.com/junegunn/fzf) (fuzzy finder)
+- [fd](https://github.com/sharkdp/fd) (fast file search, used by fzf)
+- [ripgrep](https://github.com/burntsushi/ripgrep) (rg, fast grep)
+- [eza](https://github.com/eza-community/eza) (ls replacement)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch) (system info on shell startup)
+- [yazi](https://github.com/sxyazi/yazi) (terminal file manager)
+- [bat](https://github.com/sharkdp/bat) (cat replacement with syntax highlighting)
+- [cliphist](https://github.com/sentriz/cliphist) (Wayland clipboard manager)
+- [calcure](https://github.com/anufrievroman/calcure) (terminal calendar and tasks)
+- [zoxide](https://github.com/ajeetdsouza/zoxide) (smart cd)
+- [pyenv](https://github.com/jorgenschaefer/pyvenv) (Python version manager)
+- [git](https://github.com/git/git) (version control)
+- [yay](https://github.com/jguer/yay) (AUR helper)
+- [gtk3](https://github.com/gooroom/gtk3)
+- [gtk4](https://gitlab.gnome.org/GNOME/gtk/)
+- [catppuccin-gtk-theme-mocha](https://github.com/catppuccin/gtk)
+- [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
+- [greetd](<https://github.com/kennylevinsen/greetd)
+- [regreet](https://github.com/rharish101/regreet)
 
 ---
 
-## Zsh configuration
+##  Zsh configuration
 
 The Zsh configuration (`.zshrc`) is kept intentionally minimal and fast, while providing a modern shell experience.
 
@@ -118,7 +106,7 @@ Main features:
 
 ---
 
-## Themes: `.themes/Catppuccin-Mocha`
+##  Themes: `.themes/Catppuccin-Mocha`
 
 This directory contains the Catppuccin Mocha theme adapted for several environments:
 
@@ -143,9 +131,12 @@ This ensures a consistent Catppuccin Mocha look across desktops, apps and widget
 
 ---
 
-## Yazi: `.config/yazi`
+##  Yazi: `.config/yazi`
 
-![yazi](./.assets/yazi.jpg)
+<p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/yazi.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 Configuration for the Yazi terminal file manager:
 
@@ -162,7 +153,7 @@ Configuration for the Yazi terminal file manager:
 
 ---
 
-## Wofi: `.config/wofi`
+## 󰔣 Wofi: `.config/wofi`
 
 Configuration for Wofi, a Wayland application launcher and cliphist manager:
 
@@ -175,16 +166,19 @@ Configuration for Wofi, a Wayland application launcher and cliphist manager:
 
 ---
 
-## Starship: `.config/starship.toml`
+##  Starship: `.config/starship.toml`
 
-![starship](./.assets/starship.jpg)
+<p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/starship.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 Prompt configuration for the Starship prompt, referenced from `.zshrc`.  
 It defines the segments, colors and layout of the prompt to integrate visually with the rest of the setup.
 
 ---
 
-## Sway: `.config/sway`
+## 󰧨 Sway: `.config/sway`
 
 Sway configuration is split into multiple modular files for clarity:
 
@@ -230,9 +224,12 @@ Qt theming configuration using `qt5ct` and `qt6ct`:
 
 ---
 
-## Neovim: `.config/nvim`
+## 󰦨 Neovim: `.config/nvim`
 
-![Screenshot](./.assets/nvim.jpg)
+<p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/nvim.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 Neovim configuration built in Lua with a modern plugin stack:
 
@@ -276,11 +273,14 @@ This setup gives a modern, IDE-like Neovim experience with LSP, Treesitter, file
 
 ---
 
-## Kitty: `.config/kitty`
+##  Kitty: `.config/kitty`
 
 Kitty terminal configuration and themes:
 
-![kitty](./.assets/kitty.jpg)
+<p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/kitty.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 - `kitty.conf`  
   Main Kitty configuration (fonts, window behavior, keybindings, etc.).
@@ -302,17 +302,26 @@ Additional directories complete the environment:
 
 - `.config/i3status-rust/`  
   Used by the Sway bar via `i3status.toml` (config content is referenced from Sway’s side).
-  ![i3status](./.assets/i3s.jpg)
+ <p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/i3s.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 - `.config/gtk-3.0/` and `.config/gtk-4.0/`  
   GTK settings and overrides for applications using GTK3/GTK4 (bookmarks, settings backups, etc.).
 - `.config/fastfetch/config.jsonc`  
   Fastfetch configuration controlling system summary display in the terminal.
-  ![fastfetch](./.assets/fastfetch.jpg)
+  <p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/fastfetch.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 - `.config/eza/catppuccin-mocha-lavender.yml`  
   eza color theme file tuned to match Catppuccin Mocha.
-  ![eza](./.assets/eza.jpg)
+ <p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/eza.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 - `.config/cliphist/config`  
   Configuration for cliphist clipboard manager.
@@ -324,13 +333,18 @@ Additional directories complete the environment:
   - `info.log`
 - `.config/bat/themes/Catppuccin Mocha.tmTheme`  
   Bat syntax highlighting theme, again using Catppuccin Mocha.
-  ![bat](./.assets/bat.jpg)
+ <p align="center">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/bat.jpg width="600" height="400" alt="screenshot">
+    </img>
+</p>
 
 ---
 
-## Installation (on existing system)
+##  Installation (on existing system)
 
-```bash
+### YAY install
+
+```shell
 sudo pacman -S stow git base-devel
 cd /tmp
 git clone https://aur.archlinux.org/yay.git
@@ -338,24 +352,55 @@ cd yay
 makepkg -si
 ```
 
-```bash
+### Git clone & themes install
+
+```shell
 yay -S catppuccin-cursors-mocha catppuccin-gtk-theme-mocha && git clone https://github.com/grayTerminal-sh/archasp.git
 ```
 
-```bash
-mkdir ~/.dotfiles
-```
+### Move dotfiles
 
-```bash
-mv ~/archasp/* ~/.dotfiles
+```shell
+mkdir ~/.dotfiles\
+mv ~/archasp/* ~/.dotfiles\
 rm -r ~/archasp
 ```
 
-```bash
+### Config backup
+
+```shell
+cd &&\
+mkdir ~/.config/config_backup\
+mv ~/.config/bat ~/.config/config_backup\
+mv ~/.config/btop ~/.config/config_backup\
+mv ~/.config/calcure ~/.config/config_backup\
+mv ~/.config/cliphist ~/.config/config_backup\
+mv ~/.config/eza ~/.config/config_backup\
+mv ~/.config/fastfetch ~/.config/config_backup\
+mv ~/.config/gtk-3.0 ~/.config/config_backup\
+mv ~/.config/gtk-4.O ~/.config/config_backup\
+mv ~/.config/icons ~/.config/config_backup\
+mv ~/.config/kitty ~/.config/config_backup\
+mv ~/.config/nvim ~/.config/config_backup\
+mv ~/.config/qt5ct ~/.config/config_backup\
+mv ~/.config/qt6ct ~/.config/config_backup\
+mv ~/.config/starship ~/.config/config_backup\
+mv ~/.config/sway ~/.config/config_backup\
+mv ~/.config/swaylock ~/.config/config_backup\
+mv ~/.config/swaync ~/.config/config_backup\
+mv ~/.config/themes ~/.config/config_backup\
+mv ~/.config/wofi ~/.config/config_backup\
+mv ~/.config/yazi ~/.config/config_backup\
+mv ~/.config/zsh ~/.config/config_backup
+```
+
+### Stow dotfiles & install packages
+
+```shell
 cd ~/.dotfiles
 ```
 
-```bash
+```shell
 stow \
     bat btop calcure cliphist\ 
     eza fastfetch gtk-3.0\ 
@@ -365,15 +410,120 @@ stow \
     yazi zsh
 ```
 
-```bash
-yay -S\ 
-    bat btop calcure cliphist\
-    eza fastfetch gtk-3.0\
-    gtk-4.0 icons kitty nvim\
-    qt5ct qt6ct starship\
-    swayfx swaylock swaync\
-    themes wofi yazi zsh
-
+```shell
+yay -S \
+  swayfx wofi i3status-rust kitty neovim zsh \
+  starship fzf fd ripgrep eza fastfetch yazi bat \
+  cliphist calcure zoxide pyenv git \
+  gtk3 gtk4 catppuccin-gtk-theme-mocha \
+  catppuccin-cursors-mocha swaylock-effects \
+  swayidle greetd greetd-regreet  
 ```
 
+### regreet config
+
+```toml
+# /etc/greetd/config.toml
+
+[terminal]
+# The VT to run the greeter on. Can be "next", "current" or a number
+# designating the VT.
+vt = 1
+
+# The default session, also known as the greeter.
+[default_session]
+
+# `agreety` is the bundled agetty/login-lookalike. You can replace `/bin/sh`
+# with whatever you want started, such as `sway`.
+command = "sway --config /etc/greetd/sway-config"
+
+# The user to run the command as. The privileges this user must have depends
+# on the greeter. A graphical greeter may for example require the user to be
+# in the `video` group.
+user = "greetd"
+
+```
 ---
+```toml
+# SPDX-FileCopyrightText: 2022 Harish Rajagopal <harish.rajagopals@gmail.com>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[background]
+# Path to the background image
+path = "/home/fy59/Images/Wallpapers/sway.png"
+
+# How the background image covers the screen if the aspect ratio doesn't match
+# Available values: "Fill", "Contain", "Cover", "ScaleDown"
+# Refer to: https://docs.gtk.org/gtk4/enum.ContentFit.html
+# NOTE: This is ignored if ReGreet isn't compiled with GTK v4.8 support.
+fit = "Cover"
+
+[GTK]
+# Whether to use the dark theme
+application_prefer_dark_theme = true
+
+# Cursor theme name
+cursor_theme_name = "catppuccin-mocha-lavender-cursors"
+
+# Whether to blink the cursor
+cursor_blink = true
+
+# Font name and size
+font_name = "jetbrains mono nerd font 14"
+
+# Icon theme name
+icon_theme_name = "Tela-blue-dark"
+
+# GTK theme name
+theme_name = "catppuccin-mocha-lavender-standard+default"
+
+[commands]
+# The command used to reboot the system
+reboot = ["systemctl", "reboot"]
+
+# The command used to shut down the system
+poweroff = ["systemctl", "poweroff"]
+
+[appearance]
+# The message that initially displays on startup
+greeting_msg = "Welcome back!"
+
+
+[widget.clock]
+# strftime format argument
+# See https://docs.rs/jiff/0.1.14/jiff/fmt/strtime/index.html#conversion-specifications
+format = "%H:%M"
+
+# How often to update the text
+resolution = "500ms"
+
+# Override system timezone (IANA Time Zone Database name, aka /etc/zoneinfo path)
+# Remove to use the system time zone.
+timezone = "Europe/Paris"
+
+# Ask GTK to make the label at least this wide. This helps keeps the parent element layout and width consistent.
+# Experiment with different widths, the interpretation of this value is entirely up to GTK.
+label_width = 150
+```
+---
+```toml
+exec "regreet; swaymsg exit"
+include /etc/sway/config.d/*
+
+### Keyboard (modify it)
+input * {
+    xkb_layout fr
+    xkb_variant oss
+}
+
+### Touchpad
+input "type:touchpad" {
+    tap enabled
+    tap_button_map lrm
+}
+```
+---
+```shell
+sudo systemctl enable --now greetd.service
+```
