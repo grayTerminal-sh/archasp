@@ -361,8 +361,8 @@ yay -S catppuccin-cursors-mocha catppuccin-gtk-theme-mocha && git clone https://
 ### Move dotfiles
 
 ```shell
-mkdir ~/.dotfiles\
-mv ~/archasp/* ~/.dotfiles\
+mkdir ~/.dotfiles &&\
+mv ~/archasp/* ~/.dotfiles &&\
 rm -r ~/archasp
 ```
 
@@ -370,27 +370,27 @@ rm -r ~/archasp
 
 ```shell
 cd &&\
-mkdir ~/.config/config_backup\
-mv ~/.config/bat ~/.config/config_backup\
-mv ~/.config/btop ~/.config/config_backup\
-mv ~/.config/calcure ~/.config/config_backup\
-mv ~/.config/cliphist ~/.config/config_backup\
-mv ~/.config/eza ~/.config/config_backup\
-mv ~/.config/fastfetch ~/.config/config_backup\
-mv ~/.config/gtk-3.0 ~/.config/config_backup\
-mv ~/.config/gtk-4.O ~/.config/config_backup\
-mv ~/.config/icons ~/.config/config_backup\
-mv ~/.config/kitty ~/.config/config_backup\
-mv ~/.config/nvim ~/.config/config_backup\
-mv ~/.config/qt5ct ~/.config/config_backup\
-mv ~/.config/qt6ct ~/.config/config_backup\
-mv ~/.config/starship ~/.config/config_backup\
-mv ~/.config/sway ~/.config/config_backup\
-mv ~/.config/swaylock ~/.config/config_backup\
-mv ~/.config/swaync ~/.config/config_backup\
-mv ~/.config/themes ~/.config/config_backup\
-mv ~/.config/wofi ~/.config/config_backup\
-mv ~/.config/yazi ~/.config/config_backup\
+mkdir ~/.config/config_backup &&\
+mv ~/.config/bat ~/.config/config_backup &&\
+mv ~/.config/btop ~/.config/config_backup &&\
+mv ~/.config/calcure ~/.config/config_backup &&\
+mv ~/.config/cliphist ~/.config/config_backup &&\
+mv ~/.config/eza ~/.config/config_backup &&\
+mv ~/.config/fastfetch ~/.config/config_backup &&\
+mv ~/.config/gtk-3.0 ~/.config/config_backup &&\
+mv ~/.config/gtk-4.O ~/.config/config_backup &&\
+mv ~/.config/icons ~/.config/config_backup &&\
+mv ~/.config/kitty ~/.config/config_backup &&\
+mv ~/.config/nvim ~/.config/config_backup &&\
+mv ~/.config/qt5ct ~/.config/config_backup &&\
+mv ~/.config/qt6ct ~/.config/config_backup &&\
+mv ~/.config/starship ~/.config/config_backup &&\
+mv ~/.config/sway ~/.config/config_backup &&\
+mv ~/.config/swaylock ~/.config/config_backup &&\
+mv ~/.config/swaync ~/.config/config_backup &&\ 
+mv ~/.config/themes ~/.config/config_backup &&\
+mv ~/.config/wofi ~/.config/config_backup &&\
+mv ~/.config/yazi ~/.config/config_backup &&\
 mv ~/.config/zsh ~/.config/config_backup
 ```
 
@@ -422,6 +422,12 @@ yay -S \
 
 ### regreet config
 
+```shell
+sudo mkdir -p /etc/greetd/background &&\
+sudo cp ~/Pictures/Wallpapers/sway.png /etc/greetd/background
+```
+---
+
 ```toml
 # /etc/greetd/config.toml
 
@@ -443,15 +449,19 @@ command = "sway --config /etc/greetd/sway-config"
 user = "greetd"
 
 ```
+
 ---
+
 ```toml
+# /etc/greetd/regreet.toml
+
 # SPDX-FileCopyrightText: 2022 Harish Rajagopal <harish.rajagopals@gmail.com>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 [background]
 # Path to the background image
-path = "/home/fy59/Images/Wallpapers/sway.png"
+path = "/etc/greetd/background/sway.png"
 
 # How the background image covers the screen if the aspect ratio doesn't match
 # Available values: "Fill", "Contain", "Cover", "ScaleDown"
@@ -506,8 +516,12 @@ timezone = "Europe/Paris"
 # Experiment with different widths, the interpretation of this value is entirely up to GTK.
 label_width = 150
 ```
+
 ---
+
 ```toml
+# /etc/greetd/sway-config
+
 exec "regreet; swaymsg exit"
 include /etc/sway/config.d/*
 
