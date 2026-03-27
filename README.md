@@ -419,7 +419,7 @@ yay -S \
   cliphist calcure zoxide pyenv git \
   gtk3 gtk4 catppuccin-gtk-theme-mocha \
   catppuccin-cursors-mocha swaylock-effects \
-  swayidle greetd greetd-regreet  
+  swayidle greetd greetd-regreet grim slurp
 ```
 
 ### Regreet config
