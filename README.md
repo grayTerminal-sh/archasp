@@ -2,7 +2,7 @@
 
 <p align="center">
 <picture>
-    <img source=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/screen.jpg width="600" height="400" alt="screenshot">
+    <img src=https://raw.githubusercontent.com/grayTerminal-sh/archasp/main/.assets/screen.jpg width="600" height="400" alt="screenshot">
 </picture>
 
 Personal Arch Linux configuration focused on: 
