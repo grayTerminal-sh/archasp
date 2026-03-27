@@ -246,10 +246,9 @@ va() {
     echo "❌ Aucun venv trouvé (venv/ ou .venv/)"
     return 1
   fi
-}
+};
 
 alias venv='python -m venv venv'
-alias venv2='python -m venv .venv'
 alias vd='deactivate'
 alias vrm='rm -rf venv .venv'
 alias vreq='pip install -r requirements.txt'

@@ -1,6 +1,18 @@
-# "$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = 'https://starship.rs/config-schema.json'
+format = """
+$os$username$hostname$directory$git_branch$git_status$python$lua$rust$php$nodejs${custom.venv}
+$character
+"""
+right_format = """
+$time$battery
+"""
+add_newline = true
 
 palette = "catppuccin_mocha"
+
+[[battery.display]]
+threshold = 30
+style = 'bold red'
 
 [aws]
 symbol = " "
@@ -23,6 +35,9 @@ symbol = " "
 [conda]
 symbol = " "
 
+[container]
+format = '[$symbol \[$name\]]($style) '
+
 [crystal]
 symbol = " "
 
@@ -34,9 +49,18 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncation_length = 3
+truncation_symbol = '…/'
 
 [docker_context]
 symbol = " "
+
+[env_var.SHELL]
+variable = 'SHELL'
+default = 'unknown shell'
+
+[env_var.USER]
+default = 'unknown user'
 
 [elixir]
 symbol = " "
@@ -81,6 +105,10 @@ symbol = " "
 symbol = " "
 
 [hostname]
+disabled = false
+ssh_only = false
+format = "[@$hostname]($style) "
+style = "bold lavender"
 ssh_symbol = " "
 
 [java]
@@ -92,8 +120,14 @@ symbol = " "
 [kotlin]
 symbol = " "
 
+[localip]
+ssh_only = false
+format = '@[$localipv4](bold red) '
+disabled = false
+
 [lua]
 symbol = " "
+format = 'via [ $version](bold blue) '
 
 [memory_usage]
 symbol = "󰍛 "
@@ -109,9 +143,15 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+format = 'via [ $version](bold green) '
 
 [ocaml]
 symbol = " "
+
+[os]
+disabled = false
+format = "[$symbol]($style)-"
+style = "bold lavender"
 
 [os.symbols]
 Alpaquita = " "
@@ -172,6 +212,7 @@ symbol = " "
 
 [php]
 symbol = " "
+format = 'via [ $version](147 bold) '
 
 [pijul_channel]
 symbol = " "
@@ -181,6 +222,9 @@ symbol = "󰏗 "
 
 [python]
 symbol = " "
+style = "bold yellow"
+format = '[$symbol($virtualenv )]($style) '
+python_binary = ["./.venv/bin/python", "python", "python3"]
 
 [rlang]
 symbol = "󰟔 "
@@ -190,15 +234,41 @@ symbol = " "
 
 [rust]
 symbol = "󱘗 "
+format = 'via [󱘗  $version](red bold)'
 
 [scala]
 symbol = " "
+
+[shell]
+fish_indicator = '󰈺 '
+powershell_indicator = '_'
+unknown_indicator = 'mystery shell'
+style = 'lavender'
+disabled = false
 
 [status]
 symbol = " "
 
 [swift]
 symbol = " "
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M"        # 24h, heures:minutes
+style = "blue"
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style)"
+style_user = "bold lavender"
+style_root = "bold red"
+
+[custom.venv]
+command = "echo VENV-ACTIVE"
+when = '[[ -n "$VIRTUAL_ENV" ]]'
+format = '[ $output ](bold red) '
 
 [xmake]
 symbol = " "

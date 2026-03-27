@@ -403,13 +403,7 @@ cd ~/.dotfiles
 ```
 
 ```shell
-stow \
-    bat btop calcure cliphist\ 
-    eza fastfetch gtk-3.0\ 
-    gtk-4.0 icons kitty nvim\ 
-    qt5ct qt6ct starship sway\ 
-    swaylock swaync themes wofi\ 
-    yazi zsh
+stow *\
 ```
 
 ```shell
