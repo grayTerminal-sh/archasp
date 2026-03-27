@@ -14,9 +14,8 @@ Personal Arch Linux configuration focused on:
 all reproducible from a single install script and a GNU Stow‑managed dotfiles repo.
 <p>
 
-<p align="cente">
-[Installation Guide](<README#Installation (on existing system)>)
-</p>
+[Installation Guide](README#Installation (on existing system))
+
 ---
 
 ##  Overview
