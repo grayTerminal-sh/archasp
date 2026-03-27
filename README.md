@@ -1,4 +1,4 @@
-# ![#b4befe] ArchASP – Arch Sway Pentest '#b4befe'
+$${\color{lightgreen}Light # ArchASP – Arch Sway Pentest $$
 
 <!-- <p align="center"> -->
 <picture>
