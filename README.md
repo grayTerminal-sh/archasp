@@ -20,7 +20,7 @@ all reproducible from a single install script and a GNU Stow‑managed dotfiles 
 
 ---
 
-##  Overview
+## Overview
 
 This repo contains my entire user configuration, including:
 
