@@ -15,7 +15,9 @@ all reproducible from a single install script and a GNU Stow‑managed dotfiles 
 <p>
 
 [Installation Guide](#installation-on-existing-system)
+
 [Snapper install & config](#snapper-config)
+
 ---
 
 ##  Overview
