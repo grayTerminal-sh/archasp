@@ -142,10 +142,15 @@ alias b='yazi'
 alias n='nvim'
 
 # Git
+unalias gc
 alias g='ga && gc && gp'
 alias gs='git status'
 alias ga='git add .'
-alias gc='git commit'
+gc() {
+  echo -n "Message de commit: "
+  read msg
+  git commit -m "$msg"
+}
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
 
