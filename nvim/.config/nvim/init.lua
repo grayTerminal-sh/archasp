@@ -29,13 +29,8 @@ local ts_site = vim.fn.stdpath("data") .. "/site"
 if not vim.tbl_contains(vim.opt.rtp:get(), ts_site) then
   vim.opt.rtp:append(ts_site)
 end
-
--- Appel de Lazy
+-- charge lazy.nvim + plugins
 require("config.lazy")
-
--- Appel de .md config
-require("config.markdown")
-
 -- Position du curser
 vim.api.nvim_create_autocmd("BufReadPost", {
   callback = function()
@@ -47,40 +42,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
--- Colorscheme
-vim.cmd.colorscheme("catppuccin-nvim")
--- Lire ~/.config/theme : "dark" ou "light"
-local mode = "dark"
-local ok, file = pcall(io.open, vim.fn.expand("~/.config/theme"), "r")
-if ok and file then
-  local line = file:read("*l")
-  if line == "light" or line == "dark" then
-    mode = line
-  end
-  file:close()
-end
-
--- Config avant le colorscheme (optionnel mais conseillé)
-local ok_tn, tn = pcall(require, "catppuccin-nvim")
-if ok_tn then
-  tn.setup({
-    -- style par défaut (dark)
-    style = "mocha",
-    light_style = "latte", -- utilisé quand background = light
-  })
-end
-
-if mode == "light" then
-  vim.o.background = "light"
-  vim.cmd.colorscheme("catppuccin-latte")
-else
-  vim.o.background = "dark"
-  vim.cmd.colorscheme("catppuccin-mocha")
-end
-
--- Keymaps (fichier séparé)
-require("config.maps")
-
 -- Undo persistant
 local undodir = vim.fn.stdpath("state") .. "/undo"
 if vim.fn.isdirectory(undodir) == 0 then
@@ -89,9 +50,19 @@ end
 vim.opt.undodir = undodir
 vim.opt.undofile = true
 
--- Mini
-require('mini.map').setup()
-
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
+
+-- require
+-- Keymaps (fichier séparé)
+require("config.maps")
+
+-- Appel de .md config
+require("config.markdown")
+
+-- Mason/LSP
+require("mason-lspconfig").setup()
+
+ 
+vim.cmd.colorscheme "catppuccin-mocha"

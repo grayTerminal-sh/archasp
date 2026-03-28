@@ -4,7 +4,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "tokyonight",
+        theme = "catppuccin-mocha",
         icons_enabled = true,
         section_separators = "",
         component_separators = "",

@@ -1,11 +1,13 @@
 return {
   "echaya/neowiki.nvim",
   opts = {
-    -- nil => ~/wiki par défaut
-    -- tu pourras le personnaliser plus tard
-    wiki_dirs = nil,
+    wiki_dirs = {
+        { name = "Pentest", path = "~/Wiki/pentest" },
+        { name = "Python", path = "~/Wiki/python" },
+        { name = "Osint", path = "~/Wiki/osint" },
+    },
     index_file = "index.md",
-    discover_nested_roots = false,
+    discover_nested_roots = true,
     keymaps = {
       action_link = "<CR>",
       action_link_vsplit = "<S-CR>",
