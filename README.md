@@ -298,6 +298,14 @@ This allows instant switching between many color schemes while defaulting to a C
 
 ---
 
+## Snapper
+
+Snapper is used here to manage Btrfs snapshots for the root filesystem.
+Its main configuration for this setup lives in /etc/snapper/configs/root, where snapshot limits and cleanup rules are defined.
+Together with grub-btrfs, this configuration is integrated into GRUB so that the created snapshots appear as additional boot entries in the GRUB menu and can be selected directly at startup.
+
+---
+
 ## Other configs
 
 Additional directories complete the environment:
@@ -413,7 +421,8 @@ yay -S \
   cliphist calcure zoxide pyenv git \
   gtk3 gtk4 catppuccin-gtk-theme-mocha \
   catppuccin-cursors-mocha swaylock-effects \
-  swayidle greetd greetd-regreet grim slurp
+  swayidle greetd greetd-regreet grim slurp \
+  snapper brtfs-progs grub-snapper
 ```
 
 ### Regreet config
@@ -536,4 +545,82 @@ input "type:touchpad" {
 ---
 ```shell
 sudo systemctl enable --now greetd.service
+```
+
+### Snepper config
+
+```shell
+sudo snapper -c root create-config /\
+sudo snapper -c root create-config /@
+```
+```shell
+sudo systemctl enable --now grub-btrfsd.service grub-btrfs.path
+```
+```shell
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+```config
+# /etc/snapper/configs/root
+# subvolume to snapshot
+SUBVOLUME="/"
+
+# filesystem type
+FSTYPE="btrfs"
+
+
+# btrfs qgroup for space aware cleanup algorithms
+QGROUP=""
+
+
+# fraction or absolute size of the filesystems space the snapshots may use
+SPACE_LIMIT="0.5"
+
+# fraction or absolute size of the filesystems space that should be free
+FREE_LIMIT="0.2"
+
+
+# users and groups allowed to work with config
+ALLOW_USERS=""
+ALLOW_GROUPS=""
+
+# sync users and groups from ALLOW_USERS and ALLOW_GROUPS to .snapshots
+# directory
+SYNC_ACL="no"
+
+
+# start comparing pre- and post-snapshot in background after creating
+# post-snapshot
+BACKGROUND_COMPARISON="yes"
+
+
+# run daily number cleanup
+NUMBER_CLEANUP="yes"
+
+# limit for number cleanup
+NUMBER_MIN_AGE="3600"
+NUMBER_LIMIT="5"
+NUMBER_LIMIT_IMPORTANT="1"
+
+
+# create hourly snapshots
+TIMELINE_CREATE="yes"
+
+# cleanup hourly snapshots after some time
+TIMELINE_CLEANUP="yes"
+
+# limits for timeline cleanup
+TIMELINE_MIN_AGE="3600"
+TIMELINE_LIMIT_HOURLY="0"
+TIMELINE_LIMIT_DAILY="3"
+TIMELINE_LIMIT_WEEKLY="0"
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_QUARTERLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+
+
+# cleanup empty pre-post-pairs
+EMPTY_PRE_POST_CLEANUP="yes"
+
+# limits for empty pre-post-pair cleanup
+EMPTY_PRE_POST_MIN_AGE="3600"
 ```
