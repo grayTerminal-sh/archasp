@@ -151,6 +151,7 @@ gc() {
   git commit -m "$msg"
 }
 alias gp='git push'
+alias gwiki='git add ~/.dotfiles/wiki/Wiki/ && gc && gp && ga && gc && gp'
 alias gl='git log --oneline --graph --decorate'
 
 # Grep / ripgrep
