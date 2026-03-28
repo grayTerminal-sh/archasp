@@ -15,7 +15,7 @@ all reproducible from a single install script and a GNU Stow‑managed dotfiles 
 <p>
 
 [Installation Guide](#installation-on-existing-system)
-
+[Greetd/Regreet config](#regreet-config)
 [Snapper install & config](#snapper-config)
 
 ---
