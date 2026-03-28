@@ -9,6 +9,7 @@ Personal Arch Linux configuration focused on:
 - Keyboard-driventerminal-first
 - Terminal-first workflow with Sway, Neovim, Kitty
 - Catppuccin Mocha themed UI.  
+- Pentest learning
 
 **Goal** : 
 all reproducible from a single install script and a GNU Stow‑managed dotfiles repo.
