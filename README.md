@@ -15,7 +15,7 @@ all reproducible from a single install script and a GNU Stow‑managed dotfiles 
 <p>
 
 [Installation Guide](#installation-on-existing-system)
-
+[Snapper install & config](#snapper-config)
 ---
 
 ##  Overview
@@ -306,6 +306,24 @@ Together with grub-btrfs, this configuration is integrated into GRUB so that the
 
 ---
 
+## wiki
+This wiki is my personal cybersecurity knowledge base.
+It centralizes course notes, lab write‑ups and reference material for networking, blue team and red team topics, so I can grow a coherent skill set over time instead of scattered notes.
+The structure is intentionally simple: foundations first, then focused sections for tools and defensive/offensive techniques, plus dedicated reference indexes to quickly jump back to key resources when needed.
+
+All my notes live in a Neovim‑driven wiki.
+From a terminal session, I just launch: 
+```shell
+nvim
+``` 
+and use 
+```
+<leader>ww
+```
+to open my main index page, then navigate through Markdown links like a lightweight personal documentation site.
+
+---
+
 ## Other configs
 
 Additional directories complete the environment:
@@ -547,7 +565,7 @@ input "type:touchpad" {
 sudo systemctl enable --now greetd.service
 ```
 
-### Snepper config
+### Snapper config
 
 ```shell
 sudo snapper -c root create-config /\
