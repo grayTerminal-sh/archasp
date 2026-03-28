@@ -142,7 +142,7 @@ alias b='yazi'
 alias n='nvim'
 
 # Git
-alias g='git'
+alias g='ga && gc && gp'
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit'
