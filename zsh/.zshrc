@@ -1,5 +1,5 @@
 # =========================
-# Zsh minimal clean config
+# Zsh clean config
 # =========================
 
 # Interactive only
@@ -54,7 +54,7 @@ zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
 
 # Afficher fastfetch à l'ouverture d'un shell interactif
 if command -v fastfetch >/dev/null 2>&1; then
-  fastfetch
+    fastfetch
 fi
 
 # =========================
@@ -65,14 +65,14 @@ fi
 #   git clone https://github.com/Aloxaf/fzf-tab.git
 # =========================
 if [ -d "$HOME/.zsh/plugins" ]; then
-  [ -r "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ] &&
-    source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    [ -r "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ] &&
+        source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-  [ -r "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ] &&
-    source "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
+    [ -r "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ] &&
+        source "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
-  [ -r "$HOME/.zsh/plugins/fzf-tab/fzf-tab.zsh" ] &&
-    source "$HOME/.zsh/plugins/fzf-tab/fzf-tab.zsh"
+    [ -r "$HOME/.zsh/plugins/fzf-tab/fzf-tab.zsh" ] &&
+        source "$HOME/.zsh/plugins/fzf-tab/fzf-tab.zsh"
 fi
 
 zstyle ':completion:*' menu select
@@ -82,14 +82,6 @@ zstyle ':completion:*' menu select
 # =========================
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
-
-# Historique incrémental (history-substring-search)
-# (paquet Arch : zsh-history-substring-search)
-[ -r /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ] &&
-  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # =========================
 # Fzf + zoxide
@@ -146,9 +138,9 @@ alias g='ga && gc && gp'
 alias gs='git status'
 alias ga='git add .'
 gc() {
-  echo -n "Message de commit: "
-  read msg
-  git commit -m "$msg"
+    echo -n "Message de commit: "
+    read msg
+    git commit -m "$msg"
 }
 alias gp='git push'
 alias gwiki='git add ~/.dotfiles/wiki/Wiki/ && gc && gp && ga && gc && gp'
@@ -205,32 +197,35 @@ bindkey '^F' fzf-history-widget
 # Functions utiles
 # =========================
 extract() {
-  if [ -f "$1" ]; then
-    case "$1" in
-      *.tar.bz2) tar xjf "$1" ;;
-      *.tar.gz)  tar xzf "$1" ;;
-      *.bz2)     bunzip2 "$1" ;;
-      *.rar)     unrar x "$1" ;;
-      *.gz)      gunzip "$1" ;;
-      *.tar)     tar xf "$1" ;;
-      *.tbz2)    tar xjf "$1" ;;
-      *.tgz)     tar xzf "$1" ;;
-      *.zip)     unzip "$1" ;;
-      *.Z)       uncompress "$1" ;;
-      *.7z)      7z x "$1" ;;
-      *)         echo "'$1' format inconnu" ;;
-    esac
-  else
-    echo "'$1' n'est pas un fichier valide"
-  fi
+    if [ -f "$1" ]; then
+        case "$1" in
+            *.tar.bz2) tar xjf "$1" ;;
+            *.tar.gz)  tar xzf "$1" ;;
+            *.bz2)     bunzip2 "$1" ;;
+            *.rar)     unrar x "$1" ;;
+            *.gz)      gunzip "$1" ;;
+            *.tar)     tar xf "$1" ;;
+            *.tbz2)    tar xjf "$1" ;;
+            *.tgz)     tar xzf "$1" ;;
+            *.zip)     unzip "$1" ;;
+            *.Z)       uncompress "$1" ;;
+            *.7z)      7z x "$1" ;;
+            *)         echo "'$1' format inconnu" ;;
+        esac
+    else
+        echo "'$1' n'est pas un fichier valide"
+    fi
 }
 
 mkcd() {
-  mkdir -p "$1" && cd "$1"
+    mkdir -p "$1" && cd "$1"
 }
 
+mk() {
+    mkdir -p "$1"
+}
 psgrep() {
-  ps aux | grep -v grep | grep -i -e VSZ -e "$@"
+    ps aux | grep -v grep | grep -i -e VSZ -e "$@"
 }
 
 # =========================
@@ -241,16 +236,16 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 va() {
-  if [[ -f "venv/bin/activate" ]]; then
-    source venv/bin/activate
-    echo "✅ venv activé"
-  elif [[ -f ".venv/bin/activate" ]]; then
-    source .venv/bin/activate
-    echo "✅ .venv activé"
-  else
-    echo "❌ Aucun venv trouvé (venv/ ou .venv/)"
-    return 1
-  fi
+    if [[ -f "venv/bin/activate" ]]; then
+        source venv/bin/activate
+        echo "✅ venv activé"
+    elif [[ -f ".venv/bin/activate" ]]; then
+        source .venv/bin/activate
+        echo "✅ .venv activé"
+    else
+        echo "❌ Aucun venv trouvé (venv/ ou .venv/)"
+        return 1
+    fi
 };
 
 alias venv='python -m venv venv'
@@ -259,10 +254,19 @@ alias vrm='rm -rf venv .venv'
 alias vreq='pip install -r requirements.txt'
 alias vfreeze='pip freeze > requirements.txt'
 
-[ -f ~/.config/theme.env ] && source ~/.config/theme.env ]
+# =========================
+# Ansible
+# =========================
+aconfig() {
+    local base="$HOME/.ansible"
+    local file
 
-# Repos Dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias ca='z && config add ./.zshrc ./.themes ./.config/yazi ./.config/wofi ./.config/starship.toml ./.config/sway ./.config/qt5ct ./.config/qt6ct ./.config/nvim ./.config/kitty ./.config/i3status-rust ./.config/gtk-3.0 ./.config/gtk-4.0 ./.config/fastfetch ./.config/eza ./.config/cliphist ./.config/calcure ./.config/bat ./.config/swaylock ./.config/swaync ./.zsh ./README.md ./.assets ./.scripts'
-alias cc='config commit'
-alias cpush='config push'
+    file="$(
+        find "$base" -type f 2>/dev/null \
+        | fzf --height=80% --layout=reverse --border \
+              --prompt="ansible > " \
+              --preview 'bat --style=numbers --color=always --line-range=:300 {}'
+    )" || return
+
+    [ -n "$file" ] && nvim -c "Neotree left reveal" "$file"
+}

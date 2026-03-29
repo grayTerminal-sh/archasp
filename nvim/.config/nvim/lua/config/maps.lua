@@ -3,8 +3,8 @@ local map = vim.keymap.set
 -- Recherche
 map("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "Clear hlsearch" })
 
--- nvim-tree
--- map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
+-- neo-tree
+vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle<CR>", { silent = true, desc = "Explorer" })
 
 local telescope = require("telescope.builtin")
 

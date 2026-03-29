@@ -24,6 +24,9 @@ o.signcolumn = "yes"
 
 o.clipboard = "unnamedplus"
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Avant require("config.lazy")
 local ts_site = vim.fn.stdpath("data") .. "/site"
 if not vim.tbl_contains(vim.opt.rtp:get(), ts_site) then
@@ -66,3 +69,5 @@ require("mason-lspconfig").setup()
 
  
 vim.cmd.colorscheme "catppuccin-mocha"
+
+
