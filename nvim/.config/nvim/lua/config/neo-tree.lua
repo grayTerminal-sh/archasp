@@ -3,7 +3,9 @@ vim.g.loaded_netrwPlugin = 1
 
 require("neo-tree").setup({
   filesystem = {
-    follow_current_file = true,
+    follow_current_file = {
+        enable = true,
+    },
     hijack_netrw_behavior = "open_default",
   },
   window = {

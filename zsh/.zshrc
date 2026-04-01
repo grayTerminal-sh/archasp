@@ -26,6 +26,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_FIND_NO_DUPS
 HISTDUP=erase
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 
 # =========================
 # Basic behavior

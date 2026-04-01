@@ -19,6 +19,17 @@ all reproducible from a single install script and a GNU Stow‑managed dotfiles 
 [Greetd/Regreet config](#regreet-config)
 [Snapper install & config](#snapper-config)
 
+## Status
+
+ArchASP is currently in active development.
+
+An **ArchASP Installer** is also being actively developed, and a
+dedicated [**archasp-installer**](https://github.com/grayTerminal-sh/archasp-installer) repository has been created for it.
+
+If you want to contribute, improve the codebase, suggest ideas, or help
+shape the installer workflow, feel free to contribute to that repository
+too.
+
 ---
 
 ## Overview
@@ -261,6 +272,7 @@ Neovim configuration built in Lua with a modern plugin stack:
   - `outline.lua`
   - `render-markdown.lua`
   - `starter.lua`
+  - `neo-tree.lua`
   - `telescope.lua`
   - `treesitter.lua`
   - `ui.lua`
