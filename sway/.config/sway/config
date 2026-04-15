@@ -5,10 +5,10 @@
 ### Include 
 #
 include /etc/sway/config.d/*
-include ~/.config/sway/bind.conf
-include ~/.config/sway/bar.conf
-include ~/.config/sway/input.conf
-include ~/.config/sway/rules.conf
-include ~/.config/sway/autostart.conf
-include ~/.config/sway/style.conf
-include ~/.config/sway/swayfx.conf
+include ~/.config/sway/bind
+include ~/.config/sway/bar
+include ~/.config/sway/input
+include ~/.config/sway/rules
+include ~/.config/sway/autostart
+include ~/.config/sway/style
+include ~/.config/sway/swayfx
