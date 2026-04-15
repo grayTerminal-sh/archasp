@@ -1,4 +1,4 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+#"$schema" = 'https://starship.rs/config-schema.json'
 format = """
 $os$username$hostname$directory$git_branch$git_status$python$lua$rust$php$nodejs${custom.venv}
 $character

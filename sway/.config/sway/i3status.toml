@@ -33,7 +33,7 @@ format = " $icon $name"
 
 [[block]]
 block = "net"
-device = "wlan0"
+device = "wlp1s0"
 format = " $icon {$signal_strength $ssid} "
 
 [[block]]
@@ -43,7 +43,7 @@ max_vol = 100
 
 [[block]]
 block = "backlight"
-device = "intel_backlight"
+device = "amdgpu_bl1"
 invert_icons = true
 minimum = 10
 
