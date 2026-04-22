@@ -1,0 +1,12 @@
+#
+# Workspaces rules
+#
+    assign [app_id="deezer-desktop"] 10
+    assign [class="VirtualBox Manager"] 9
+
+#
+# Windows rules
+#
+    for_window [app_id="blueman-manager"] floating enable, resize set 40ppt 40ppt, move position center
+    for_window [app_id="pavucontrol"] floating enable, resize set 40ppt 40ppt, move position center
+    for_window [app_id="nm-connection-editor"] floating enable, resize set 40ppt 40ppt, move position center

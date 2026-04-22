@@ -272,3 +272,11 @@ aconfig() {
 
     [ -n "$file" ] && nvim -c "Neotree left reveal" "$file"
 }
+
+# =========================
+# Agent ssh
+# =========================
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519-admin </dev/null
+fi
